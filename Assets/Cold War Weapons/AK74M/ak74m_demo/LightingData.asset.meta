@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d2264b89b6878c04e96c34f0eeb30b4b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 112000000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 177205
+  packageName: AK-74 (HDRP)
+  packageVersion: 1.0
+  assetPath: Assets/Cold War Weapons/AK74M/ak74m_demo/LightingData.asset
+  uploadId: 387012

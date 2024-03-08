@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c9634f45b97697244870605b6e74c98c
+PackageManifestImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49288
+  packageName: Ragdoll helper
+  packageVersion: 1.5
+  assetPath: Packages/bz-soft.ragdoll-helper/package.json
+  uploadId: 605993

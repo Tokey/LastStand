@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c90e02283321f9f4ab042728c1e6e51d
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 49288
+  packageName: Ragdoll helper
+  packageVersion: 1.5
+  assetPath: Packages/bz-soft.ragdoll-helper/README.md
+  uploadId: 605993
