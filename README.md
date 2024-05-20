@@ -9,7 +9,7 @@ A central feature of the game is the configurable experimental harness. This fea
 Last Stand needs to be configured before experiments are run. At least 2 computers are required to run the game, where 1 will act as server/host and 1 as a client. Inside the *Data/* folder there are 3 configuration files. 
 
 - Game Config
-The first *GameConfig.csv* is for setting the game parameters and takes in 1 row of data, each with 5 columns defining the global game configuration: Is Host, IP, Port, Enable Ping Display and Round Duration.
+The first *GameConfig.csv* is for setting the game parameters and takes in 1 row of data, with 5 columns defining the global game configuration: Is Host, IP, Port, Enable Ping Display and Round Duration. This is read from the server and the client.
   - Is Host Value can be TRUE or FALSE, indicating if the game is run in host mode or client mode.
   - IP For the host, it can be kept as 127.0.0.1. For clients, it must be changed to the host's IP address.
   - Port Must be the same on host and clients. By default it is 7777.
@@ -24,7 +24,7 @@ Example File:
 *P.S: The main GameConfig.csv must not have any header, just values.*
 
 
-- The second file *PlayerConfig.csv* defines the configuration for both of the players' delay settings each round. It can have **n** rows, indicating **n+1** rounds. The first row of the game is played twice: initially as the 'Practice Round' and then again at a random point in the session. Before each session, the round settings are shuffled to ensure variability in the experiences of the players. This file is read only on the host side and the settings are propagated to the client at the start of each round. There are 8 columns in each row. For the columns, these are:
+- The second file *PlayerConfig.csv* defines the configuration for both of the players' delay settings each round. This is read from the server. It can have **n** rows, indicating **n+1** rounds. The first row of the game is played twice: initially as the 'Practice Round' and then again at a random point in the session. Before each session, the round settings are shuffled to ensure variability in the experiences of the players. This file is read only on the host side and the settings are propagated to the client at the start of each round. There are 8 columns in each row. For the columns, these are:
   - Client 1 base delay,
   - Client 1 target delay,
   - Client 1 adaptive time delay increase rate, 
@@ -35,5 +35,29 @@ Example File:
   Example File:
   | Client 1  base delay | Client 1 target delay  | Client 1 adaptive time delay increase rate | Client 1 adaptive time delay decrease rate | Client 2 base delay | Client 2 target delay | Client 2  adaptive time delay increase rate | Client 2 adaptive time delay decrease rate|
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+  |0|	0 |2000	|2000	|0	|0	|2000|	2000|
+  |0|	0	|2000|	2000|	100|	100|	2000|	2000|
+
+*P.S: The main PlayerConfig.csv must not have any header, just values.*
+
+- The final config file is called *WeaponConfig.csv* and this file is read from the client side. Allowing each client to have different weapon properties. takes in 1 row of data, with 4 columns defining the client weapon configuration:
+  - Firing type
+    - 0 for semi auto
+    - 1 for burst of 3
+    - 2 for full auto
+  - Weapon fire rate
+  - Magazine size
+  - Damage per bullet
+
+Example File:
+| Firing Type  | Fire Rate  | Magazine Size  | Damage per bullet |
+| ------------- | ------------- | ------------- | ------------- |
+| 2	| 400 | 	7777 |	33 |	3 |
+
+*P.S: The main GameConfig.csv must not have any header, just values.*
+    
+  
+
+
   
   
