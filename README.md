@@ -10,17 +10,19 @@ A central feature of the game is the configurable experimental harness. This fea
 Last Stand needs to be configured before experiments are run. At least 2 computers are required to run the game, where 1 will act as server/host and 1 as a client. Inside the *Data/* folder there are 3 configuration files. 
 
 - Game Config
-The first *GameConfig.csv* is for setting the game parameters and takes in 1 row of data, with 5 columns defining the global game configuration: Is Host, IP, Port, Enable Ping Display and Round Duration. This is read from the server and the client.
-  - Is Host Value can be TRUE or FALSE, indicating if the game is run in host mode or client mode.
+The first *GameConfig.csv* is for setting the game parameters and takes in 1 row of data, with 5 columns defining the global game configuration: Is Server, IP, Port, Enable Ping Display and Round Duration. This is read from the server and the client.
+  - Is Server Value can be TRUE or FALSE, indicating if the game is run in server mode or client mode.
   - IP For the host, it can be kept as 127.0.0.1. For clients, it must be changed to the host's IP address.
   - Port Must be the same on host and clients. By default it is 7777.
   - Ping Value can be TRUE or FALSE. When TRUE the players' current latency is shown in the top center of the screen.
   - Round duration indicates how long each round will last
  
 Example File:
-| IsHost  | IP  | Port  | Enable Ping Disply | Round Duration |
+| Is Server  | IP  | Port  | Enable Ping Disply | Round Duration |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| FALSE	| 127.0.0.1| 	7777 |	FALSE |	FALSE |	80 |
+| FALSE	| 127.0.0.1| 	7777 |	FALSE  |	80 |
+
+Here, the config represents a client, connecting to a server running at localhost:7777 and ping will not be displayed. For clients, the round duration is ignored because it is read by the server only.
 
 *P.S: The main GameConfig.csv must not have any header, just values.*
 
@@ -33,13 +35,15 @@ Example File:
     
   The next 4 columns are similar, but for the Client 2.
 
-*P.S: For latency configurations, set base and target delay the same, increase/decrease rate can 0.*
+*P.S: For latency configurations, set base and target delay the same, increase/decrease rate can be any value.*
 
 Example File:
 | Client 1  base delay | Client 1 target delay  | Client 1 adaptive time delay increase rate | Client 1 adaptive time delay decrease rate | Client 2 base delay | Client 2 target delay | Client 2  adaptive time delay increase rate | Client 2 adaptive time delay decrease rate|
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
   |0|	0 |2000	|2000	|0	|0	|2000|	2000|
   |0|	0	|2000|	2000|	100|	100|	2000|	2000|
+
+  Here, the first row is where both of the players have no latency, and second row is where client 1 has no latency but client 2 has 100 ms of latency. 
 
 *P.S: The main PlayerConfig.csv must not have any header, just values.*
 
@@ -48,7 +52,7 @@ Example File:
     - 0 for semi auto
     - 1 for burst of 3
     - 2 for full auto
-  - Weapon fire rate
+  - Weapon fire rate (rounds per minute)
   - Magazine size
   - Damage per bullet
 
@@ -57,9 +61,12 @@ Example File:
 | ------------- | ------------- | ------------- | ------------- |
 | 2	| 400 | 	31 |	3 |
 
+This represents a fully automatic weapon with 400 RPM fire rate, 31 magazine size and 3 damage per bullet.
+
 *P.S: The main GameConfig.csv must not have any header, just values.*
     
 **Building The Game**
+
 The game was developed using Unity 2023.2.1f1 and uses Unity Netcode for Gameobjects alongside FPS Animation package. Both are included in the repo. Open the repo with unity, and build.
 
   
