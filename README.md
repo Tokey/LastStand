@@ -32,8 +32,8 @@ Example File:
     
   The next 4 columns are similar, but for the Client 2.
 
-  Example File:
-  | Client 1  base delay | Client 1 target delay  | Client 1 adaptive time delay increase rate | Client 1 adaptive time delay decrease rate | Client 2 base delay | Client 2 target delay | Client 2  adaptive time delay increase rate | Client 2 adaptive time delay decrease rate|
+Example File:
+| Client 1  base delay | Client 1 target delay  | Client 1 adaptive time delay increase rate | Client 1 adaptive time delay decrease rate | Client 2 base delay | Client 2 target delay | Client 2  adaptive time delay increase rate | Client 2 adaptive time delay decrease rate|
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
   |0|	0 |2000	|2000	|0	|0	|2000|	2000|
   |0|	0	|2000|	2000|	100|	100|	2000|	2000|
