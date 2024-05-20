@@ -6,6 +6,7 @@ The gameplay features rounds of deathmatch 1v1 play with unlimited lives. The pl
 A central feature of the game is the configurable experimental harness. This feature allows for launching game rounds with different amounts of delay for each player. Also included is a logging system that captures player data every game tick, provides round summaries, and records details of each projectile shot, facilitating detailed analysis of player performance under different latency conditions. After each round, the game shows customizable qualitative questions to players - the defaults inquires about perceived lag and acceptability. User answers are logged in the round summary.
 
 **Configs**
+
 Last Stand needs to be configured before experiments are run. At least 2 computers are required to run the game, where 1 will act as server/host and 1 as a client. Inside the *Data/* folder there are 3 configuration files. 
 
 - Game Config
@@ -32,6 +33,8 @@ Example File:
     
   The next 4 columns are similar, but for the Client 2.
 
+*P.S: For latency configurations, set base and target delay the same, increase/decrease rate can 0.*
+
 Example File:
 | Client 1  base delay | Client 1 target delay  | Client 1 adaptive time delay increase rate | Client 1 adaptive time delay decrease rate | Client 2 base delay | Client 2 target delay | Client 2  adaptive time delay increase rate | Client 2 adaptive time delay decrease rate|
   | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
@@ -56,8 +59,8 @@ Example File:
 
 *P.S: The main GameConfig.csv must not have any header, just values.*
     
-  
-
+**Building The Game**
+The game was developed using Unity 2023.2.1f1 and uses Unity Netcode for Gameobjects alongside FPS Animation package. Both are included in the repo. Open the repo with unity, and build.
 
   
   
