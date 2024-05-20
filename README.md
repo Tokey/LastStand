@@ -52,7 +52,7 @@ Example File:
 Example File:
 | Firing Type  | Fire Rate  | Magazine Size  | Damage per bullet |
 | ------------- | ------------- | ------------- | ------------- |
-| 2	| 400 | 	33 |	3 |
+| 2	| 400 | 	31 |	3 |
 
 *P.S: The main GameConfig.csv must not have any header, just values.*
     
