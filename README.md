@@ -67,7 +67,7 @@ This represents a fully automatic weapon with 400 RPM fire rate, 31 magazine siz
     
 **Building The Game**
 
-The game was developed using Unity 2023.2.1f1 and uses Unity Netcode for Gameobjects alongside FPS Animation package. Both are included in the repo. Open the repo with unity, and build.
+The game was developed using Unity 2023.2.1f1 and uses Unity Netcode for Gameobjects alongside FPS Animation package. The full Unity source with all the assets can be found here - https://drive.google.com/file/d/12r7bYfud7ZrPLey-NS9Kxud00wS1jf3i/view?usp=drive_link. Open the repo with the correct version of Unity, then build.
 
   
   
