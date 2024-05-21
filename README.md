@@ -69,5 +69,9 @@ This represents a fully automatic weapon with 400 RPM fire rate, 31 magazine siz
 
 The game was developed using Unity 2023.2.1f1 and uses Unity Netcode for Gameobjects alongside FPS Animation package. The full Unity source with all the assets can be found here - https://drive.google.com/file/d/12r7bYfud7ZrPLey-NS9Kxud00wS1jf3i/view?usp=drive_link. Open the repo with the correct version of Unity, then build.
 
+**Thesis Report**
+Last Stand was used as a tool for my M.S. thesis. Reference: Samin Shahriar Tokey. Improving Player Experience and Fairness Using
+adaptive Time-Delay on First-Person Shooters, M.S. Thesis, Interactive Media and Game Development, Worcester Polytechnic Institute, Summer 2024. (Advisor Mark Claypool) Online at: http://www.cs.wpi.edu/~claypool/ms/tokey-lag-24/
+
   
   
