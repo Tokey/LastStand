@@ -20,7 +20,7 @@ The first *GameConfig.csv* is for setting the game parameters and takes in 1 row
 Example File:
 | Is Server  | IP  | Port  | Enable Ping Disply | Round Duration |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| FALSE	| 127.0.0.1| 	7777 |	FALSE  |	80 |
+| FALSE	| 127.0.0.1| 	7777 |	FALSE  |	80.0 |
 
 Here, the config represents a client, connecting to a server running at localhost:7777 and ping will not be displayed. For clients, the round duration is ignored because it is read by the server only.
 
